@@ -1,0 +1,14 @@
+.project
+.pydevproject
+*.pyc
+*.pyo
+*~
+*.db
+*.sqlite3
+*.orig
+docs/_build/*
+docs/_static/*
+dist/*
+*.egg-info/*
+.coverage
+.tox/*

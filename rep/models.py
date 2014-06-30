@@ -37,7 +37,7 @@ class ProgramSong(models.Model):
 	order=models.IntegerField(blank=True, null=True, default=0)
 
 	def __str__(self):
-		return str(self.program)
+		return self.song.title
 
 class Artist(models.Model):
 	first_name=models.CharField(max_length=50)
