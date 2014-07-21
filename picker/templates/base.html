@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>{% block title %} RepPicker {% endblock %}</title>
+<title>RepPicker</title>
 </head>
 <body>
-	<h1> Website tagline goes here </h1>
+	<h1> RepPicker:</h1>
+	<h2>Inspiration for music program planning</h2>
 	<div id="navbar">
 		{% block navbar %}
-		<ul>
+		<ul id = "nav">
 			<li><a href="{% url 'index' %}">Home</a></li>
 			<li><a href="{% url 'blog_index' %}">The Picker Review</a></li>
-			<li><a href="/search-programs/">Search Programs</a></li>
-			<li><a href="Search songs">Search Songs</a></li>
+			<li><a href="/search-programs/">Programs</a></li>
+			<li><a href="{% url 'list_songs' %}">Songs</a></li>
 		</ul>
 		{% endblock %}
 	</div>

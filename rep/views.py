@@ -1,15 +1,20 @@
-from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render_to_response, render, get_object_or_404
 
 from rep.models import Song, Program, Composer
 
 def index(request):
-	all_songs = Song.objects.all()
-	context = {'all_songs': all_songs}
-	return render(request, 'rep/index.html', context)
+	return render(request, 'rep/index.html')
 
-def detail(request, song_id):
-	song_composer = get_object_or_404(Song, pk=composer_id)
-	return render(request, 'rep/detail.html', {'composer' : composer}) 
-	
+def list_songs(request,):
+	return render_to_response('rep/list_songs.html', {
+		'songs' : Song.objects.all()
+		})
+
+
+def song_detail(request, slug):
+	return render_to_response('rep/song_detail.html', {
+		'song' : get_object_or_404(Song, slug=slug)
+		})
+
+
+

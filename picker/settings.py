@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +44,10 @@ INSTALLED_APPS = (
     'rep',
     'blog',
 )
+
+EMAIL_BACKEND = \
+    'django.core.mail.backends.console.EmailBackend'
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

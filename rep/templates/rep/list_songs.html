@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+<ul>
+	{% for song in songs %}
+		<li><a href="{% url 'song_detail' song.slug %}">{{ song.title }} by {{ song.composer }}</a></li>
+	{% endfor %}
+	</ul>
+
+
+{% endblock %}

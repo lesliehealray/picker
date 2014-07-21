@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %} 
-	<div id = "post">
-		<a href = "/" > {{ posts }} </a>
-	</div>
-
+	<ul>
+		{% for post in posts %}
+			<li><a href="{% url 'blog_post' post.slug %}">{{ post.title }}</a></li>		
+		{% endfor %}
+	</ul>
 {% endblock %}
 
 
