@@ -11,7 +11,7 @@
 		<ul id = "nav">
 			<li><a href="{% url 'index' %}">Home</a></li>
 			<li><a href="{% url 'blog_index' %}">The Picker Review</a></li>
-			<li><a href="/search-programs/">Programs</a></li>
+			<li><a href="{% url 'list_programs' %}">Programs</a></li>
 			<li><a href="{% url 'list_songs' %}">Songs</a></li>
 		</ul>
 		{% endblock %}

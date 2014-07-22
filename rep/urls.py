@@ -7,4 +7,8 @@ urlpatterns = patterns('',
     url(r'^songs/(?P<slug>[^\.]+)/$', 
         'rep.views.song_detail',
         name='song_detail'),
+    url(r'^program/$', 'rep.views.list_programs', name='list_programs'),
+    url(r'^program/(?P<slug>[^\.]+)/$',
+    	'rep.views.program_detail',
+    	name='program_detail'),
  )

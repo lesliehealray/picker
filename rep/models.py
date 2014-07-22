@@ -7,7 +7,7 @@ class Song(models.Model):
 	language=models.CharField(max_length=50)
 	librettist_first_name=models.CharField(max_length=75, null=True, blank=True)
 	librettist_last_name=models.CharField(max_length=75, null=True, blank=True)
-	slug = models.SlugField(max_length=100, unique=True)
+	slug=models.SlugField(max_length=100, unique=True)
 
 	def __str__(self):
 		return self.title 
@@ -18,6 +18,7 @@ class Program(models.Model):
 	songs=models.ManyToManyField(Song, through='ProgramSong')
 	create_date=models.DateField()
 	perf_date=models.DateField()
+	slug=models.SlugField(max_length=100, unique=True)
 
 	def __str__(self):
 		return self.name

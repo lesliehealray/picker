@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+<ul>
+	{% for program in programs %}
+		<li><a href="{% url 'program_detail' program.slug %}">{{ program.name }} created on {{ program.create_date }}</a></li>
+	{% endfor %}
+</ul>
+
+
+{% endblock %}
