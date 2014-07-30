@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %} 
 	<div id="song_detail">
-		<h2>{{ song.title }}</h2>
-		<p>{{ song.composer }}</p>
+		<h2>Song Title: {{ song.title }}</h2>
+		<h3>Collection: {{ song.collection}}</h3>
+		<h3>Composer: {{ song.composer }}</h3>
+		<h3>Librettist: {{ song.librettist_first_name }} {{ song.librettist_last_name }}</h3>
+		<h3>Language: {{ song.language }}</h3>
+
 	</div>
 
 {% endblock %}

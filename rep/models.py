@@ -4,6 +4,7 @@ from django.db import models
 class Song(models.Model):
 	title=models.CharField(max_length=50)
 	composer=models.ForeignKey('Composer')
+	collection=models.CharField(max_length=75, null=True)
 	language=models.CharField(max_length=50)
 	librettist_first_name=models.CharField(max_length=75, null=True, blank=True)
 	librettist_last_name=models.CharField(max_length=75, null=True, blank=True)

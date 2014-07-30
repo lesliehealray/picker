@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %} 
 	<ul>
-		{% for post in posts %}
+		{% for posts in post %}
 			<li><a href="{% url 'blog_post' post.slug %}">{{ post.title }}</a></li>		
 		{% endfor %}
 	</ul>
